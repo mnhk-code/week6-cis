@@ -1,0 +1,53 @@
+    div::before {
+        content: "front";
+        color: white;
+        width: 200px;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: palevioletred;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotateY(0deg);
+        transform-origin: center;
+        transition: 1.5s;
+    }
+    
+     :first-child:hover::before {
+        background-color: rgba(94, 174, 249, 0.826);
+        transform: translate(-50%, -50%) rotateY(180deg);
+        color: transparent;
+    }
+    
+    div::after {
+        content: "back";
+        display: none;
+        position: absolute;
+        color: aliceblue;
+        z-index: 3;
+        transform: translate(-50%-50%);
+        top: 48%;
+        left: 48%;
+    }
+    
+    div:hover::after {
+        display: block;
+    }
+    
+    .s:before {
+        top: 50%;
+        left: 25%;
+    }
+    
+    .s:hover::before {
+        transform: translate(-50%, -50%) rotatex(180deg);
+        background-color: rgba(94, 174, 249, 0.826);
+        color: transparent;
+    }
+    
+    .s:after {
+        top: 48%;
+        left: 23%;
+    }

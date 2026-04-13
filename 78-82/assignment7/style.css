@@ -1,0 +1,9 @@
+        * {
+            box-sizing: border-box;
+            margin: 0%;
+            padding: 0;
+        }
+        
+        div:first-child h3:last-of-type+div {
+            color: red;
+        }

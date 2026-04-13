@@ -1,0 +1,50 @@
+* {
+    box-sizing: border-box;
+    margin: 0%;
+    padding: 0;
+}
+
+ :root {
+    --main: rgb(21, 159, 150);
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: white;
+}
+
+h1 {
+    width: 150px;
+    height: 80px;
+    background-color: var(--main);
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    position: relative;
+}
+
+h1::after {
+    content: " ";
+    background-color: rgb(255, 255, 255);
+    position: absolute;
+    transform: skewx(12deg);
+    width: 150px;
+    height: 83px;
+    right: 140px;
+}
+
+h1::before {
+    content: " ";
+    background-color: var(--main);
+    position: absolute;
+    transform: skewx(12deg);
+    right: 150px;
+    height: 80px;
+    width: 20px;
+    z-index: 10;
+}

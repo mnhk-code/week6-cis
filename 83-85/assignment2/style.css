@@ -1,0 +1,45 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.grid {
+    display: grid;
+    justify-content: space-around;
+    gap: 20px;
+}
+
+.grid>div {
+    background-color: gainsboro;
+}
+
+@media(max-width:767px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+    .title {
+        color: rgb(0, 0, 0)
+    }
+}
+
+@media(min-width:768px)and (max-width:991px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .title {
+        color: rgb(225, 35, 10)
+    }
+}
+
+@media(min-width:992px) {
+    .grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .title {
+        color: rgb(20, 134, 146)
+    }
+}
